@@ -1,0 +1,33 @@
+<!-- Chat launcher -->
+<button id="chat-open" class="btn" style="position:fixed;right:18px;bottom:18px;">Chat</button>
+<div id="chat-box" style="display:none;position:fixed;right:18px;bottom:64px;width:360px;height:480px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.1);overflow:hidden;">
+  <div style="padding:10px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;font-weight:600">
+    Bulletins Bot
+    <a href="#" id="chat-close" style="font-weight:400;text-decoration:none;">Close</a>
+  </div>
+  <div id="chat-msgs" style="padding:10px;height:360px;overflow:auto;font:14px system-ui"></div>
+  <form id="chat-form" style="display:flex;gap:8px;padding:10px;border-top:1px solid #eee">
+    <input id="chat-q" style="flex:1;padding:8px;border:1px solid #ddd;border-radius:10px" placeholder="Ask about a state/topic..." />
+    <button class="btn" type="submit">Send</button>
+  </form>
+</div>
+<script>
+(function(){
+  const open = document.getElementById('chat-open');
+  const box = document.getElementById('chat-box');
+  const close = document.getElementById('chat-close');
+  const msgs = document.getElementById('chat-msgs');
+  const form = document.getElementById('chat-form');
+  const q = document.getElementById('chat-q');
+  function show(){ box.style.display='block'; }
+  function hide(){ box.style.display='none'; }
+  function append(who, text){ const d=document.createElement('div'); d.style.margin='6px 0'; d.innerHTML='<b>'+who+':</b> '+text; msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight; }
+  open?.addEventListener('click', (e)=>{ e.preventDefault(); show(); });
+  close?.addEventListener('click', (e)=>{ e.preventDefault(); hide(); });
+  form?.addEventListener('submit', async (e)=>{
+    e.preventDefault(); const text=(q.value||'').trim(); if(!text) return; append('You', text); q.value='';
+    const res = await fetch('/chat', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ message: text })});
+    const data = await res.json(); append('Bot', data.output ? data.output : JSON.stringify(data));
+  });
+})();
+</script>

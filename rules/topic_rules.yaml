@@ -1,0 +1,25 @@
+﻿topics:
+  Rates:
+    any:
+      - ["rate|tax rate", "increase|decrease|change|adjust|effective|begin", "%|percent|rate of"]
+  Forms:
+    any:
+      - ["form|certificate|application|DR-|ST-|01-339|rev\\.|revision|version", "updated|revised|new|expires|supersedes"]
+  Exemptions:
+    any:
+      - ["exempt|exemption|nontaxable|exclud", "food|machinery|manufacturing|PPE|grocer|beverage|soda|SSB"]
+  Freight:
+    any:
+      - ["freight|delivery|shipping|transportation|carrier|FOB", "taxable|nontaxable|separately stated|title|possession"]
+  Marketplace:
+    any:
+      - ["marketplace", "facilitator|seller|collection|remit"]
+  Deadlines:
+    any:
+      - ["deadline|due|filing|extension", "return|remittance|quarterly|annual"]
+negatives:
+  - "job fair"
+  - "award"
+  - "grant"
+  - "press release"
+  - "hiring|career|internship"

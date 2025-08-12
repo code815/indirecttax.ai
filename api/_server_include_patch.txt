@@ -1,0 +1,1 @@
+# NOTE: This is a minimal patch: it only adds router includes if not present.

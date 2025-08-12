@@ -1,0 +1,24 @@
+﻿states:
+  - code: TX
+    hubs:
+      - name: "Comptroller News"
+        url: "https://comptroller.texas.gov/about/media-center/news/"
+        allow_re: "^https://comptroller\\.texas\\.gov/(about|taxes)/.*"
+        type: "hub"
+        feed_url: "https://comptroller.texas.gov/about/media-center/news/feed.xml"
+      - name: "Sales & Use Forms"
+        url: "https://comptroller.texas.gov/taxes/forms/"
+        allow_re: "^https://comptroller\\.texas\\.gov/taxes/forms/.*"
+        type: "hub"
+
+  - code: CA
+    hubs:
+      - name: "CDTFA Notices"
+        url: "https://www.cdtfa.ca.gov/notices.htm"
+        allow_re: "^https://www\\.cdtfa\\.ca\\.gov/.*"
+        type: "hub"
+      - name: "CDTFA Forms"
+        url: "https://www.cdtfa.ca.gov/formspubs/"
+        allow_re: "^https://www\\.cdtfa\\.ca\\.gov/formspubs/.*"
+        type: "hub"
+
