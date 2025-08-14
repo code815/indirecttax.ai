@@ -1,0 +1,39 @@
+# envs & deps
+.venv/
+venv/
+env/
+node_modules/
+
+# VCS & editor junk
+.git/
+.gitignore
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# build outputs (not used here)
+dist/
+build/
+out/
+.next/
+
+# big media / sources you don't need on prod
+assets/videos/
+assets/raw/
+assets/images/demos/
+*.psd
+*.ai
+*.sketch
+*.fig
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+
+# data dumps
+*.csv
+*.tsv
+*.sqlite
+*.db

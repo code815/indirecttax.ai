@@ -1,0 +1,170 @@
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        
+        <!-- Style Css-->
+        @@include("partials/head-css-green.html")
+
+    </head>
+
+    @@include("partials/body.html")
+        
+
+        
+        @@include("partials/navbar/nav-real-estate.html")
+
+        <!-- Hero Start -->
+        <section class="bg-half-170 d-table w-100" style="background: url('assets/images/real/1.jpg') center;">
+            <div class="bg-overlay bg-black opacity-7"></div>
+            <div class="container">
+                <div class="row mt-5 justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <div class="pages-heading title-heading">
+                            <h2 class="text-white title-dark mb-0"> Sell Faster. Save Thousands. </h2>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div> <!--end container-->
+        </section><!--end section-->
+        <div class="position-relative">
+            <div class="shape overflow-hidden text-color-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+        <!-- Start -->
+        <section class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="section-title mb-4 pb-2 text-center">
+                            <h4 class="title mb-4">How It Works</h4>
+                            <p class="text-muted para-desc mb-0 mx-auto">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="card border-0 text-center features feature-primary feature-clean rounded p-4">
+                            <div class="icons text-center mx-auto">
+                                <i class="uil uil-estate rounded h3 mb-0"></i>
+                            </div>
+
+                            <div class="card-body p-0 mt-4">
+                                <a href="javascript:void(0)" class="title h5 text-dark">Evaluate Property</a>
+                                <p class="text-muted mt-3 mb-0">Composed in a pseudo-Latin language which more or less pseudo-Latin language corresponds.</p>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="card border-0 text-center features feature-primary feature-clean rounded p-4">
+                            <div class="icons text-center mx-auto">
+                                <i class="uil uil-bag rounded h3 mb-0"></i>
+                            </div>
+
+                            <div class="card-body p-0 mt-4">
+                                <a href="javascript:void(0)" class="title h5 text-dark">Meeting with Agent</a>
+                                <p class="text-muted mt-3 mb-0">Composed in a pseudo-Latin language which more or less pseudo-Latin language corresponds.</p>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="card border-0 text-center features feature-primary feature-clean rounded p-4">
+                            <div class="icons text-center mx-auto">
+                                <i class="uil uil-key-skeleton rounded h3 mb-0"></i>
+                            </div>
+
+                            <div class="card-body p-0 mt-4">
+                                <a href="javascript:void(0)" class="title h5 text-dark">Close the Deal</a>
+                                <p class="text-muted mt-3 mb-0">Composed in a pseudo-Latin language which more or less pseudo-Latin language corresponds.</p>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+
+            <div class="container mt-100 mt-60">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="section-title mb-4 pb-2 text-center">
+                            <h4 class="title mb-4">Brokerage Calculator</h4>
+                            <p class="text-muted para-desc mb-0 mx-auto">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row justify-content-center mt-4 pt-2">
+                    <div class="col-lg-8 col-12">
+                        <div class="p-4 shadow rounded" role="form">
+                            <ul class="list-unstyled d-flex justify-content-between mb-0">
+                                <li class="h6 mb-0">Min $ 10000</li>
+                                <li class="h6 mb-0">Max $ 200000</li>
+                            </ul>
+
+                            <div class="row">
+                                <div class="col-sm-12 mb-4">
+                                    <label for="slider" class="form-label"></label>
+                                    <input type="range" value="10000" min="10000" max="200000" class="form-range custom-range" id="slider">
+                                </div><!--end col-->
+                            </div><!--end row-->
+
+                            <ul class="list-unstyled text-center d-md-flex justify-content-between mb-0">
+                                <li>
+                                    <ul class="mb-0 text-md-start brokerage-form list-unstyled">
+                                        <li class="h5 mb-0"><label class="control-label">Total Value ($)</label></li>
+                                        <li class="h5 mb-0"><input type="hidden" id="amount" class="form-control"><span class="text-primary">$</span><p class="mb-0 d-inline-block h5 text-primary" id="amount-label"></p></li>
+                                    </ul>
+                                </li>
+
+                                <li class="mt-2 mt-sm-0">
+                                    <ul class="mb-0 text-md-end brokerage-form list-unstyled">
+                                        <li class="h5 mb-0"><label class="control-label">Brokerage Fee</label></li>
+                                        <li class="h5 mb-0"><input type="hidden" id="saving" class="form-control mb-0"> <p class="mb-0 d-inline-block h5 text-primary" id="saving-label"></p></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
+
+
+        @@include("partials/footer/footer-one.html")
+
+        @@include("partials/offcanvas-right.html")
+        @@include("partials/switcherbar.html")
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fs-5"><i data-feather="arrow-up" class="fea icon-sm icons align-middle"></i></a>
+        <!-- Back to top -->
+
+        <!-- javascript -->
+        @@include("partials/vendor-scripts.html")
+        <!-- SLIDER -->
+        <!-- Main Js -->
+        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        <script src="assets/js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+        <script src="assets/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+
+        <script>
+            const rangeSlider = document.getElementById('slider');
+            const value  = rangeSlider.value;
+                document.getElementById('amount-label').innerHTML = value;
+                document.getElementById('saving-label').innerHTML = parseFloat(value *0.01).toFixed(2);
+            rangeSlider.addEventListener('input',function(e){
+                const value  = rangeSlider.value;
+                document.getElementById('amount-label').innerHTML = value;
+                document.getElementById('saving-label').innerHTML = parseFloat(value *0.01).toFixed(2);
+            });
+        </script>
+    </body>
+</html>

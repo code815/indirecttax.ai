@@ -1,0 +1,88 @@
+
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        <!-- Css -->
+        <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <div class="page-wrapper toggled">
+            @@include("partials/sidebar-dark.html")
+
+            <!-- Start Page Content -->
+            <main class="page-content bg-light">
+                @@include("partials/top-header.html")
+
+                <div class="container-fluid">
+                    <div class="layout-specing">
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Pagination</h5>
+
+                            <nav aria-label="breadcrumb" class="d-inline-block mt-2 mt-sm-0">
+                                <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
+                                    <li class="breadcrumb-item text-capitalize"><a href="index.html">Landrick</a></li>
+                                    <li class="breadcrumb-item text-capitalize"><a href="">Components</a></li>
+                                    <li class="breadcrumb-item text-capitalize active" aria-current="page">Pagination</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    
+                        <div class="row">
+                            <!-- Pagination Start -->
+                            <div class="col-12 mt-4">
+                                <div class="card rounded shadow">
+                                    <div class="p-4 border-bottom">
+                                        <h5 class="title mb-0"> Pagination </h5>
+                                    </div>
+        
+                                    <div class="p-4">
+                                        <h6 class="text-muted mb-4 pb-2">Ex. <br>
+                                            <pre><code class="text-danger">
+&lt;ul class="pagination mb-0"&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="javascript:void(0)" aria-label="Previous"&gt;Prev&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active"&gt;&lt;a class="page-link" href="javascript:void(0)"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="javascript:void(0)"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="javascript:void(0)"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="javascript:void(0)" aria-label="Next"&gt;Next&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+                                        </h6>
+                                        
+                                        <ul class="pagination mb-0">
+                                            <li class="page-item"><a class="page-link" href="javascript:void(0)" aria-label="Previous">Prev</a></li>
+                                            <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript:void(0)" aria-label="Next">Next</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+                            <!-- Pagination End -->
+                        </div><!--end row-->
+                    </div>
+                </div><!--end container-->
+
+                @@include("partials/footer.html")
+            </main>
+            <!--End page-content" -->
+        </div>
+        <!-- page-wrapper -->
+
+        @@include("partials/offcanvas-right.html")
+        
+        <!-- javascript -->
+        @@include("partials/vendor-scripts.html")
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <!-- Main Js -->
+        <script src="assets/js/plugins.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,12 @@
+<meta charset="utf-8" />
+<title>@@title - Bootstrap 5 Multipurpose App, Saas & Software Landing & Admin Dashboard Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
+<meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern" />
+<meta name="author" content="Shreethemes" />
+<meta name="email" content="support@shreethemes.in" />
+<meta name="website" content="https://shreethemes.in" />
+<meta name="Version" content="v5.0.0" />
+
+<!-- favicon -->
+<link rel="shortcut icon" href="assets/images/favicon.ico" />

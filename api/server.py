@@ -1,6 +1,7 @@
 ﻿from datetime import datetime, timedelta
-from typing import Optional
+from typing import Optional, List
 import os
+import logging
 
 from fastapi import FastAPI, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -8,24 +9,48 @@ import psycopg2.extras
 
 from api.db import conn
 
+# ------------------------------------------------------------------------------
+# App
+# ------------------------------------------------------------------------------
 app = FastAPI(title="Bulletin API", version="0.2")
 
-# ---- CORS (env-driven; comma-separated list; "*" allowed) ----
-allow_list = [o.strip() for o in os.getenv("CORS_ALLOW_ORIGINS", "*").split(",")]
+# ------------------------------------------------------------------------------
+# CORS (env-driven)
+#   - Set CORS_ALLOW_ORIGINS as comma-separated list for prod, e.g.:
+#       CORS_ALLOW_ORIGINS=https://indirecttax.ai,https://www.indirecttax.ai
+#   - If "*", credentials are automatically disabled to comply with spec.
+# ------------------------------------------------------------------------------
+_default_origins = "https://indirecttax.ai,https://www.indirecttax.ai,http://localhost:5173,http://localhost:3000"
+_origins_env = os.getenv("CORS_ALLOW_ORIGINS", _default_origins)
+ALLOWED_ORIGINS: List[str] = [o.strip() for o in _origins_env.split(",") if o.strip()]
+_is_wildcard = len(ALLOWED_ORIGINS) == 1 and ALLOWED_ORIGINS[0] == "*"
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allow_list,
-    allow_credentials=True,
-    allow_methods=["*"],
+    allow_origins=ALLOWED_ORIGINS if not _is_wildcard else ["*"],
+    allow_credentials=not _is_wildcard,  # browsers disallow creds with "*"
+    allow_methods=["GET"],               # read-only API
     allow_headers=["*"],
 )
 
-# ---- helpers ----
+# ------------------------------------------------------------------------------
+# Security headers (lightweight)
+# ------------------------------------------------------------------------------
+@app.middleware("http")
+async def _security_headers(request, call_next):
+    resp = await call_next(request)
+    resp.headers["X-Content-Type-Options"] = "nosniff"
+    resp.headers["Referrer-Policy"] = "no-referrer-when-downgrade"
+    return resp
+
+# ------------------------------------------------------------------------------
+# Helpers
+# ------------------------------------------------------------------------------
 def _dict_cur(c):
     return c.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
 def _parse_date(d: str) -> datetime:
-    # Expect YYYY-MM-DD; raise 422 if bad format
+    """Expect YYYY-MM-DD; raise 422 if bad format."""
     try:
         return datetime.strptime(d, "%Y-%m-%d")
     except ValueError:
@@ -43,7 +68,9 @@ def _csv_clean(s: Optional[str]):
     vals = [v.strip() for v in s.split(",") if v.strip()]
     return vals or None
 
-# ---- health endpoints ----
+# ------------------------------------------------------------------------------
+# Health endpoints
+# ------------------------------------------------------------------------------
 @app.get("/livez")
 def livez():
     """Simple liveness probe — does the app start/respond?"""
@@ -51,16 +78,20 @@ def livez():
 
 @app.get("/healthz")
 def healthz():
-    """Readiness probe — can we talk to the DB?"""
+    """Readiness probe — DB connectivity without leaking internals."""
     try:
         with conn() as c, c.cursor() as cur:
             cur.execute("SELECT 1")
             cur.fetchone()
         return {"ok": True}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    except Exception:
+        # Avoid leaking exception text; log server-side if needed
+        logging.exception("DB health check failed")
+        raise HTTPException(status_code=500, detail="DB check failed")
 
-# ---- API ----
+# ------------------------------------------------------------------------------
+# API
+# ------------------------------------------------------------------------------
 @app.get("/changes")
 def list_changes(
     from_date: Optional[str] = Query(None, description="YYYY-MM-DD (inclusive)"),

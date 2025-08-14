@@ -1,0 +1,171 @@
+
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        <!-- Css -->
+        <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <div class="page-wrapper toggled">
+            @@include("partials/sidebar-dark.html")
+
+            <!-- Start Page Content -->
+            <main class="page-content bg-light">
+                @@include("partials/top-header.html")
+
+                <div class="container-fluid">
+                    <div class="layout-specing">
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Shopping Cart</h5>
+
+                            <nav aria-label="breadcrumb" class="d-inline-block mt-2 mt-sm-0">
+                                <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
+                                    <li class="breadcrumb-item text-capitalize"><a href="index.html">Landrick</a></li>
+                                    <li class="breadcrumb-item text-capitalize"><a href="#">Shop</a></li>
+                                    <li class="breadcrumb-item text-capitalize active" aria-current="page">Shop Cart</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-12 mt-4">
+                                <div class="table-responsive bg-white shadow rounded">
+                                    <table class="table mb-0 table-center">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-bottom py-3" style="min-width:20px "></th>
+                                                <th class="border-bottom text-start py-3" style="min-width: 300px;">Product</th>
+                                                <th class="border-bottom text-center py-3" style="min-width: 160px;">Price</th>
+                                                <th class="border-bottom text-center py-3" style="min-width: 160px;">Qty</th>
+                                                <th class="border-bottom text-end py-3 pe-4" style="min-width: 160px;">Total</th>
+                                            </tr>
+                                        </thead>
+        
+                                        <tbody>
+                                            <tr class="shop-list">
+                                                <td class="h6 text-center"><a href="javascript:void(0)" class="text-danger"><i class="uil uil-times"></i></a></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/images/shop/product/s1.jpg" class="img-fluid avatar avatar-small rounded shadow" style="height:auto;" alt="">
+                                                        <h6 class="mb-0 ms-3">T-Shirt</h6>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">$ 255.00</td>
+                                                <td class="text-center qty-icons">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="btn btn-icon btn-soft-primary minus">-</button>
+                                                    <input min="0" name="quantity" value="7" type="number" class="btn btn-icon btn-soft-primary qty-btn quantity">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="btn btn-icon btn-soft-primary plus">+</button>
+                                                </td>
+                                                <td class="text-end fw-bold pe-4">$510.00</td>
+                                            </tr>
+        
+                                            <tr class="shop-list">
+                                                <td class="h6 text-center"><a href="javascript:void(0)" class="text-danger"><i class="uil uil-times"></i></a></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/images/shop/product/s3.jpg" class="img-fluid avatar avatar-small rounded shadow" style="height:auto;" alt="">
+                                                        <h6 class="mb-0 ms-3">Branded Watch</h6>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">$ 520.00</td>
+                                                <td class="text-center qty-icons">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="btn btn-icon btn-soft-primary minus">-</button>
+                                                    <input min="0" name="quantity" value="1" type="number" class="btn btn-icon btn-soft-primary qty-btn quantity">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="btn btn-icon btn-soft-primary plus">+</button>
+                                                </td>
+                                                <td class="text-end fw-bold pe-4">$520.00</td>
+                                            </tr>
+        
+                                            <tr class="shop-list">
+                                                <td class="h6 text-center"><a href="javascript:void(0)" class="text-danger"><i class="uil uil-times"></i></a></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/images/shop/product/s6.jpg" class="img-fluid avatar avatar-small rounded shadow" style="height:auto;" alt="">
+                                                        <h6 class="mb-0 ms-3">T-Shirt</h6>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">$ 160.00</td>
+                                                <td class="text-center qty-icons">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="btn btn-icon btn-soft-primary minus">-</button>
+                                                    <input min="0" name="quantity" value="2" type="number" class="btn btn-icon btn-soft-primary qty-btn quantity">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="btn btn-icon btn-soft-primary plus">+</button>
+                                                </td>
+                                                <td class="text-end fw-bold pe-4">$640.00</td>
+                                            </tr>
+        
+                                            <tr class="shop-list">
+                                                <td class="h6 text-center"><a href="javascript:void(0)" class="text-danger"><i class="uil uil-times"></i></a></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="assets/images/shop/product/s10.jpg" class="img-fluid avatar avatar-small rounded shadow" style="height:auto;" alt="">
+                                                        <h6 class="mb-0 ms-3">Sunglasses</h6>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">$ 260.00</td>
+                                                <td class="text-center qty-icons">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="btn btn-icon btn-soft-primary minus">-</button>
+                                                    <input min="0" name="quantity" value="2" type="number" class="btn btn-icon btn-soft-primary qty-btn quantity">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="btn btn-icon btn-soft-primary plus">+</button>
+                                                </td>
+                                                <td class="text-end fw-bold pe-4">$520.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!--end col-->
+                        </div><!--end row-->
+                        <div class="row">
+                            <div class="col-lg-8 col-md-6 mt-4">
+                                <a href="javascript:void(0)" class="btn btn-primary">Shop More</a>
+                                <a href="javascript:void(0)" class="btn btn-soft-primary ms-2">Update Cart</a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 ms-auto mt-4">
+                                <div class="table-responsive bg-white rounded shadow">
+                                    <table class="table table-center table-padding mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="h6 ps-4 py-3">Subtotal</td>
+                                                <td class="text-end fw-bold pe-4">$ 2190</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="h6 ps-4 py-3">Taxes</td>
+                                                <td class="text-end fw-bold pe-4">$ 219</td>
+                                            </tr>
+                                            <tr class="bg-light">
+                                                <td class="h6 ps-4 py-3">Total</td>
+                                                <td class="text-end fw-bold pe-4">$ 2409</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="mt-4 text-end">
+                                    <a href="checkout.html" class="btn btn-primary">Proceed to checkout</a>
+                                </div>
+                            </div><!--end col-->
+                        </div><!--end row-->
+                    </div>
+                </div><!--end container-->
+
+                @@include("partials/footer.html")
+            </main>
+            <!--End page-content" -->
+        </div>
+        <!-- page-wrapper -->
+
+        @@include("partials/offcanvas-right.html")
+        
+        <!-- javascript -->
+        @@include("partials/vendor-scripts.html")
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <!-- Main Js -->
+        <script src="assets/js/plugins.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IndirectTax.ai — Bulletins & SaaS Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track and search US state tax bulletin changes.">
+    <meta name="keywords" content="tax, compliance, bulletins, indirect tax, sales tax, VAT">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Libs & Styles -->
+    <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" class="theme-opt" rel="stylesheet" type="text/css">
+    <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/style.min.css" class="theme-opt" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <header id="topnav" class="defaultscroll sticky">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <img src="assets/images/logo-dark.png" height="24" class="logo-light-mode" alt="">
+          <img src="assets/images/logo-light.png" height="24" class="logo-dark-mode" alt="">
+        </a>
+
+        <div class="menu-extras">
+          <div class="menu-item">
+            <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+              <div class="lines"><span></span><span></span><span></span></div>
+            </a>
+          </div>
+        </div>
+
+        <ul class="buy-button list-inline mb-0">
+          <li class="list-inline-item mb-0">
+            <a href="javascript:void(0)" class="btn btn-icon btn-light">
+              <img src="assets/images/app/app-store.png" class="avatar avatar-ex-small p-1" alt="">
+            </a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a href="javascript:void(0)" class="btn btn-icon btn-light">
+              <img src="assets/images/app/play-store.png" class="avatar avatar-ex-small p-1" alt="">
+            </a>
+          </li>
+        </ul>
+
+        <div id="navigation">
+          <ul class="navigation-menu">
+            <li><a href="index.html" class="sub-menu-item">Home</a></li>
+            <li><a href="/dashboard/" class="sub-menu-item">Dashboard</a></li>
+            <li class="has-submenu parent-parent-menu-item">
+              <a href="javascript:void(0)">Landing</a><span class="menu-arrow"></span>
+              <ul class="submenu megamenu">
+                <li>
+                  <ul>
+                    <li class="megamenu-head"><i class="uil uil-book-open fs-6 align-middle"></i> Landing Pages</li>
+                    <li><a href="index-saas.html" class="sub-menu-item">Saas</a></li>
+                    <li><a href="index-classic-saas.html" class="sub-menu-item">Classic Saas</a></li>
+                    <li><a href="index-modern-saas.html" class="sub-menu-item">Modern Saas</a></li>
+                    <li><a href="index-agency.html" class="sub-menu-item">Agency</a></li>
+                    <li><a href="index-apps.html" class="sub-menu-item">Application</a></li>
+                    <li><a href="index-classic-app.html" class="sub-menu-item">Classic App</a></li>
+                    <li><a href="index-modern-app.html" class="sub-menu-item">Modern App</a></li>
+                    <li><a href="index-studio.html" class="sub-menu-item">Studio</a></li>
+                    <li><a href="index-marketing.html" class="sub-menu-item">Marketing</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-submenu parent-parent-menu-item">
+              <a href="javascript:void(0)">Docs</a><span class="menu-arrow"></span>
+              <ul class="submenu">
+                <li><a href="documentation.html" class="sub-menu-item">Documentation</a></li>
+                <li><a href="changelog.html" class="sub-menu-item">Changelog</a></li>
+                <li><a href="widget.html" class="sub-menu-item">Widget</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <section class="bg-home d-flex align-items-center" style="background: url('assets/images/saas/home-shape.png') center center; height: auto;" id="home">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center mt-0 mt-md-5 pt-0 pt-md-5">
+            <div class="title-heading margin-top-100">
+              <h1 class="heading mb-3">Build fast, release quickly.</h1>
+              <p class="para-desc mx-auto text-muted">Live monitoring of state tax bulletins, built for speed.</p>
+              <div class="mt-4 pt-2">
+                <a href="/dashboard/" class="btn btn-primary">Open Dashboard <i class="uil uil-angle-right-b"></i></a>
+              </div>
+            </div>
+
+            <div class="home-dashboard">
+              <img src="assets/images/saas/home.png" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero End -->
+
+    <!-- Features + Latest Bulletins -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <div class="features feature-primary">
+              <div class="image position-relative d-inline-block"><i class="uil uil-airplay h2 text-primary"></i></div>
+              <div class="content mt-4">
+                <h5>Easy To Use</h5>
+                <p class="text-muted mb-0">Clean UI and sensible defaults so you can move faster.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 mt-5 mt-sm-0">
+            <div class="features feature-primary">
+              <div class="image position-relative d-inline-block"><i class="uil uil-calendar-alt h2 text-primary"></i></div>
+              <div class="content mt-4">
+                <h5>Daily Updates</h5>
+                <p class="text-muted mb-0">New bulletins are captured and indexed as they land.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 mt-5 mt-sm-0">
+            <div class="features feature-primary">
+              <div class="image position-relative d-inline-block"><i class="uil uil-clock h2 text-primary"></i></div>
+              <div class="content mt-4">
+                <h5>Real-Time API</h5>
+                <p class="text-muted mb-0">Hit our REST endpoints directly from the browser.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-100 mt-60">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <div class="section-title mb-4 pb-2">
+              <h4 class="title mb-4">Latest Bulletins</h4>
+              <p class="text-muted para-desc mx-auto mb-0">Live updates from state tax bulletins.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <ul id="bulletins" class="list-unstyled mb-0"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="position-relative">
+      <div class="shape overflow-hidden text-footer">
+        <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor"></path>
+        </svg>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer-py-60">
+              <div class="row">
+                <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+                  <a href="#" class="logo-footer">
+                    <img src="assets/images/logo-light.png" height="24" alt="">
+                  </a>
+                  <p class="mt-4">Monitoring US state tax changes so you don’t have to.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                  <h5 class="footer-head">Company</h5>
+                  <ul class="list-unstyled footer-list mt-4">
+                    <li><a href="/dashboard/" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Dashboard</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                  <h5 class="footer-head">Links</h5>
+                  <ul class="list-unstyled footer-list mt-4">
+                    <li><a href="page-terms.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Terms of Services</a></li>
+                    <li><a href="page-privacy.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Privacy Policy</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                  <h5 class="footer-head">Newsletter</h5>
+                  <p class="mt-4">Sign up and receive the latest tips via email.</p>
+                  <form>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="foot-subscribe mb-3">
+                          <label class="form-label">Write your email <span class="text-danger">*</span></label>
+                          <div class="form-icon position-relative">
+                            <i data-feather="mail" class="fea icon-sm icons"></i>
+                            <input type="email" name="email" class="form-control ps-5 rounded" placeholder="Your email : " required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="d-grid">
+                          <input type="submit" class="btn btn-soft-primary" value="Subscribe">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-py-30 footer-bar">
+        <div class="container text-center">
+          <div class="row align-items-center">
+            <div class="col-sm-6">
+              <div class="text-sm-start">
+                <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> IndirectTax.ai.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/tiny-slider/min/tiny-slider.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/plugins.init.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+      const API = "/api";
+
+      async function loadBulletins(page = 1, pageSize = 10) {
+        const el = document.getElementById("bulletins");
+        if (!el) return;
+
+        try {
+          const r = await fetch(`${API}/changes?page=${page}&page_size=${pageSize}`);
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          const d = await r.json();
+          const items = d.items || [];
+
+          el.innerHTML =
+            items.map(x => `
+              <li class="my-3">
+                <strong>${x.title ?? "Untitled"}</strong><br>
+                <small class="text-muted">
+                  ${x.state ?? ""}${x.state ? " • " : ""}${x.form_id ?? ""}
+                  ${x.captured_at ? " • " + x.captured_at : ""}
+                </small>
+                ${x.source_url ? ` • <a href="${x.source_url}" target="_blank" rel="noopener">Source</a>` : ""}
+              </li>
+            `).join("") || "<li>No results.</li>";
+        } catch (e) {
+          console.error(e);
+          el.innerHTML = "<li>Failed to load.</li>";
+        }
+      }
+
+      loadBulletins();
+    </script>
+  </body>
+</html>

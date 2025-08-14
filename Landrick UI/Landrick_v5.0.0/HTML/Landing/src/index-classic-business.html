@@ -1,0 +1,57 @@
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        
+        <!-- Css -->
+        @@include("partials/head-css.html")
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- TAGLINE START-->
+        <div class="tagline bg-light">
+            <div class="container-fluid">                
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-slider">
+                            
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </div><!--end tagline-->
+        <!-- TAGLINE END-->
+        
+        @@include("partials/navbar/nav-white-tagline.html")
+
+        <!-- Start Hero -->
+        <section class="bg-home d-flex align-items-center" style="background: url('assets/images/consulting/bg.jpg') top left;">
+            <div class="container">
+
+            </div>
+        </section><!--end section-->
+        <!-- End Hero -->
+
+        
+        <!-- Footer Start -->
+        @@include("partials/footer/footer-three.html")
+        <!-- Footer End -->
+
+        @@include("partials/offcanvas-right.html")
+        @@include("partials/switcherbar.html")
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fs-5"><i data-feather="arrow-up" class="fea icon-sm icons align-middle"></i></a>
+        <!-- Back to top -->
+        
+        <!-- javascript -->
+        @@include("partials/vendor-scripts.html")
+        <!-- Main Js -->
+        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        <script src="assets/js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+        <script src="assets/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+        
+    </body>
+
+</html>

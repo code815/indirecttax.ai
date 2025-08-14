@@ -1,0 +1,54 @@
+
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        <!-- Css -->
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Start -->
+        <section class="position-relative" style="background: url('assets/images/maintenance.jpg') center;">
+            <div class="bg-overlay"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 p-0">
+                        <div class="d-flex flex-column min-vh-100 px-md-5 py-5 px-4">
+                            <div class="mt-md-5">
+                                <a href="index.html"><img src="assets/images/logo-light.png" height="24" alt=""></a>
+                            </div>
+                            <div class="title-heading my-auto">
+                                <h4 class="maintenance display-5 text-white title-dark fw-bold mb-4">System is under maintenance</h4>
+                                <p class="text-white-50 para-desc mb-4">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
+            
+                                <span id="maintenance" class="timer h1 text-white title-dark"></span><span class="d-block h6 text-uppercase text-white-50">Minutes</span>
+            
+                            </div>
+                            <div class="mb-md-5">
+                                <span class="text-white-50 h6">Follow Now</span>
+                                <ul class="list-unstyled social-icon social mb-0 mt-2">
+                                    <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="facebook" class="fea icon-sm fea-social"></i></a></li>
+                                    <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="instagram" class="fea icon-sm fea-social"></i></a></li>
+                                    <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="twitter" class="fea icon-sm fea-social"></i></a></li>
+                                    <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="linkedin" class="fea icon-sm fea-social"></i></a></li>
+                                </ul><!--end icon--> 
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
+        
+        <!-- javascript -->
+        @@include("partials/vendor-scripts.html")
+        <!-- Main Js -->
+        <script src="assets/js/plugins.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+
+</html>

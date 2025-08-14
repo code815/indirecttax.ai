@@ -1,0 +1,60 @@
+
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        <!-- Css -->
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Start -->
+        <section class="position-relative" style="background: url('assets/images/comingsoon.jpg') center;">
+            <div class="bg-overlay opacity-7"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 p-0">
+                        <div class="d-flex flex-column min-vh-100 justify-content-center px-md-5 py-5 px-4">
+                            <div class="text-center mt-md-5">
+                                <a href="index.html"><img src="assets/images/logo-light.png" height="24" alt=""></a>
+                            </div>
+                            <div class="title-heading text-center my-auto">
+                                <h4 class="coming-soon display-5 text-white title-dark fw-bold mb-4">Coming Soon</h4>
+                                <p class="text-white-50 para-desc mx-auto mb-0">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
+            
+                                <div class="subcribe-form mt-4 pt-2">
+                                    <form action="comingsoon.html">
+                                        <input type="email" id="email" class="rounded shadow" style="opacity: 0.6;" required placeholder="Type your Email..">
+                                        <button type="submit" class="btn btn-primary">Notify Me</button>
+                                    </form>
+                                </div>
+            
+                                <p class="text-white-50 mt-2"><span class="text-danger fw-bold">*</span>Notify me when website is launched</p>
+                            </div>
+                            <div class="text-center mb-md-5">
+                                <span class="text-white-50 h6">Follow Now</span>
+                                <ul class="list-unstyled social-icon social mb-0 mt-2">
+                                    <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="facebook" class="fea icon-sm fea-social"></i></a></li>
+                                    <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="instagram" class="fea icon-sm fea-social"></i></a></li>
+                                    <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="twitter" class="fea icon-sm fea-social"></i></a></li>
+                                    <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="linkedin" class="fea icon-sm fea-social"></i></a></li>
+                                </ul><!--end icon--> 
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
+        
+        <!-- javascript -->
+        @@include("partials/vendor-scripts.html")
+        <!-- Main Js -->
+        <script src="assets/js/plugins.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+
+</html>

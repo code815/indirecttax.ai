@@ -1,0 +1,852 @@
+
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        <!-- Css -->
+        <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <div class="page-wrapper toggled">
+            @@include("partials/sidebar-dark.html")
+
+            <!-- Start Page Content -->
+            <main class="page-content bg-light">
+                @@include("partials/top-header-crypto.html")
+
+                <div class="container-fluid">
+                    <div class="layout-specing">
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 class="mb-1">Calvin Carlo</h5>
+                                <span class="text-muted">My balance: <span class="h6 mb-0 text-dark">$ 45,578.032</span></span>
+                            </div>
+
+                            <!-- <nav aria-label="breadcrumb" class="d-inline-block">
+                                <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
+                                    <li class="breadcrumb-item text-capitalize"><a href="index.html">Landrick</a></li>
+                                    <li class="breadcrumb-item text-capitalize"><a href="#">Dashboard</a></li>
+                                    <li class="breadcrumb-item text-capitalize active" aria-current="page">Crypto</li>
+                                </ul>
+                            </nav> -->
+
+                            <div class="mt-3 mt-sm-0">
+                                <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#exampleModalSend">Send</a>
+                                <!-- Modal Start -->
+                                <div class="modal fade" id="exampleModalSend" tabindex="-1" aria-labelledby="exampleModalSendLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title m-0" id="exampleModalDefaultSend">Send Coin</h6>
+                                                <button type="button" class="btn btn-icon btn-close" data-bs-dismiss="modal" id="close-modal"><i class="uil uil-times fs-4 text-dark"></i></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="mb-2">
+                                                    <label for="cryptocurrency">Crypto Currency</label>              
+                                                    <select class="form-select form-control" aria-label="Default select example">
+                                                       <option selected>-- Currency --</option>
+                                                        <option value="BTC">BTC</option>
+                                                        <option value="ETH">ETH</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label for="cryptocurrency">Currency From</label>              
+                                                    <select class="form-select form-control" aria-label="Default select example">
+                                                       <option selected>-- My wallet --</option>
+                                                        <option value="BTC">BTC</option>
+                                                        <option value="ETH">ETH</option>
+                                                    </select>
+                                                </div>
+                                                <div class=" mb-2">
+                                                    <label for="toaddress">To</label> 
+                                                    <div class="input-group">                                                            
+                                                        <span class="input-group-text border" id="QUcode"><i class="uil uil-qrcode-scan"></i></span>
+                                                        <input type="text" class="form-control" placeholder="Can you scan" aria-label="Scancode">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="mb-2">
+                                                            <label for="toaddress">USD</label> 
+                                                            <div class="input-group">
+                                                                <span class="input-group-text border" id="US-dollor"><i class="uil uil-dollar-sign"></i></span>
+                                                                <input type="text" class="form-control" placeholder="USD" aria-label="US-dollor">
+                                                            </div>
+                                                        </div>
+                                                    </div><!--end col-->
+                                                    <div class="col-md-6">
+                                                        <div class="mb-2">
+                                                            <label for="BTC">BTC</label> 
+                                                            <div class="input-group">
+                                                                <span class="input-group-text border" id="BTC-coin"><i class="uil uil-bitcoin-circle"></i></span>
+                                                                <input type="text" class="form-control" placeholder="BTC" aria-label="BTC-coin">
+                                                            </div>
+                                                        </div>                                                            
+                                                    </div><!--end col-->
+                                                </div><!--end row-->
+                                                <div class="mb-2">
+                                                    <label for="Description">Description</label>              
+                                                    <textarea class="form-control" rows="3" aria-label="With textarea"></textarea>
+                                                </div>
+                                                <div class="mt-2 mb-1">
+                                                    <label for="NetworkFree">Network Free</label>
+                                                </div>
+                                                <div class="form-check form-check-inline mb-0">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Regular" value="option1">
+                                                    <label class="form-check-label" for="Regular">Regular</label>
+                                                </div>
+                                                <div class="form-check form-check-inline mb-0">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Priority" value="option2">
+                                                    <label class="form-check-label" for="Priority">Priority</label>
+                                                </div>
+                                            </div><!--end modal-body-->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Close</button>
+                                                <button class="btn btn-primary btn-sm" type="button">Continue</button>
+                                            </div><!--end modal-footer-->
+                                        </div><!--end modal-content-->
+                                    </div><!--end modal-dialog-->
+                                </div><!--end modal-->
+                                <!-- Modal ENd -->
+
+
+                                <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModalRequest">Request</a>
+                                <!-- Modal Start -->
+                                <div class="modal fade" id="exampleModalRequest" tabindex="-1" aria-labelledby="exampleModalRequestLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title m-0" id="exampleModalRequestLabel">Request Coin</h6>
+                                                <button type="button" class="btn btn-icon btn-close" data-bs-dismiss="modal" id="close-modal"><i class="uil uil-times fs-4 text-dark"></i></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="mb-2">
+                                                    <label for="cryptocurrency">Crypto Currency</label>              
+                                                    <select class="form-select form-control" aria-label="Default select example">
+                                                       <option selected>-- Currency --</option>
+                                                        <option value="BTC">BTC</option>
+                                                        <option value="ETH">ETH</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label for="cryptocurrency">Receive To</label>              
+                                                    <select class="form-select form-control" aria-label="Default select example">
+                                                       <option selected>-- My wallet --</option>
+                                                        <option value="BTC">BTC</option>
+                                                        <option value="ETH">ETH</option>
+                                                    </select>
+                                                </div>
+                                                <div class=" mb-2">
+                                                    <label for="toaddress">Address</label> 
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control"  id="W-Address" value="c12b001a15f9bd46ef1c6551386c">
+                                                        <button class="btn btn-outline-light" type="button" id="Copy_link"><i class="uil uil-copy"></i></button>
+                                                    </div>
+                                                </div>                                                    
+                                            </div><!--end modal-body-->
+                                            <div class="modal-footer">
+                                                <button class="btn btn-success btn-sm" type="button">Done</button>
+                                            </div><!--end modal-footer-->
+                                        </div><!--end modal-content-->
+                                    </div><!--end modal-dialog-->
+                                </div><!--end modal-->
+                                <!-- Modal End -->
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-7 mt-4">
+                                <div class="card rounded shadow p-3">
+                                    <div id="tradingview_123"></div>
+                                    <script src="https://s3.tradingview.com/tv.js"></script>
+                                    <script>
+                                      new TradingView.widget(
+                                        {
+                                          "width": "100%",
+                                          "height": 550,
+                                          "symbol": "BITSTAMP:BTCUSD",
+                                          "interval": "D",
+                                          "timezone": "Etc/UTC",
+                                          "theme": "Light",
+                                          "style": "1",
+                                          "locale": "en",
+                                          "toolbar_bg": "#000",
+                                          "enable_publishing": false,
+                                          "withdateranges": true,
+                                          "hide_side_toolbar": false,
+                                          "allow_symbol_change": true,
+                                          "show_popup_button": true,
+                                          "popup_width": "1000",
+                                          "popup_height": "650",
+                                          "container_id": "tradingview_123"
+                                        }
+                                      );
+                                    </script>
+                                </div>
+                            </div><!--end col-->
+
+                            <div class="col-xl-4 col-lg-5 mt-4">
+                                <div class="card rounded shadow border-0">
+                                    <div class="p-3 border-bottom">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="mb-0 fw-bold">Watchlists</h6>
+                                            
+                                            <a href="#!" class="text-primary small fw-semibold">See More <i class="uil uil-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-responsive rounded-bottom" data-simplebar style="height: 526px;">
+                                        <table class="table table-center bg-white mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="p-3 small fw-semibold text-muted" style="min-width: 120px;">Name</th>
+                                                    <th class="p-3 small fw-semibold text-muted text-center">Last</th>
+                                                    <th class="p-3 small fw-semibold text-muted text-center">Chg</th>
+                                                    <th class="p-3 small fw-semibold text-muted text-center">Chg%</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody class="text-center">
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="px-3 py-2 border-0">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/crypto/bitcoin.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                                            <h6 class="mb-0 small ms-2">BTC</h6>
+                                                        </div>
+                                                    </th>
+                                                    <td class="small border-0 fw-semibold p-2">$34587</td>
+                                                    <td class="text-danger small border-0 fw-semibold p-2">-$745</td>
+                                                    <td class="text-danger small border-0 fw-semibold p-2">-2.5%</td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="px-3 py-2 border-0">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/crypto/litecoin.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                                            <h6 class="mb-0 small ms-2">LTC</h6>
+                                                        </div>
+                                                    </th>
+                                                    <td class="small border-0 fw-semibold p-2">$216</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+$.264</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+.264%</td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="px-3 py-2 border-0">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/crypto/auroracoin.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                                            <h6 class="mb-0 small ms-2">ARC</h6>
+                                                        </div>
+                                                    </th>
+                                                    <td class="small border-0 fw-semibold p-2">$452</td>
+                                                    <td class="text-danger small border-0 fw-semibold p-2">-$1.9</td>
+                                                    <td class="text-danger small border-0 fw-semibold p-2">-1.9%</td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="px-3 py-2 border-0">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/crypto/coinye.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                                            <h6 class="mb-0 small ms-2">CNY</h6>
+                                                        </div>
+                                                    </th>
+                                                    <td class="small border-0 fw-semibold p-2">$154</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+$1.05</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+1.05%</td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="px-3 py-2 border-0">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/crypto/ethereum.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                                            <h6 class="mb-0 small ms-2">ETH</h6>
+                                                        </div>
+                                                    </th>
+                                                    <td class="small border-0 fw-semibold p-2">$854</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+$1.705</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+1.705%</td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="px-3 py-2 border-0">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/crypto/potcoin.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                                            <h6 class="mb-0 small ms-2">PTC</h6>
+                                                        </div>
+                                                    </th>
+                                                    <td class="small border-0 fw-semibold p-2">$548</td>
+                                                    <td class="text-danger small border-0 fw-semibold p-2">-$3.2</td>
+                                                    <td class="text-danger small border-0 fw-semibold p-2">-3.2%</td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="px-3 py-2 border-0">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/crypto/zcash.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                                            <h6 class="mb-0 small ms-2">ZCC</h6>
+                                                        </div>
+                                                    </th>
+                                                    <td class="small border-0 fw-semibold p-2">$965</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+$1.465</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+1.465%</td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="px-3 py-2 border-0">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/crypto/primecoin.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                                            <h6 class="mb-0 small ms-2">XPM</h6>
+                                                        </div>
+                                                    </th>
+                                                    <td class="small border-0 fw-semibold p-2">$4875</td>
+                                                    <td class="text-danger small border-0 fw-semibold p-2">-$1.08</td>
+                                                    <td class="text-danger small border-0 fw-semibold p-2">-1.08%</td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="px-3 py-2 border-0">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/crypto/blocknet.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                                            <h6 class="mb-0 small ms-2">BLOCK</h6>
+                                                        </div>
+                                                    </th>
+                                                    <td class="small border-0 fw-semibold p-2">$478</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+$2.8</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+2.8%</td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="px-3 py-2 border-0">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/crypto/kucoin.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                                            <h6 class="mb-0 small ms-2">KCS</h6>
+                                                        </div>
+                                                    </th>
+                                                    <td class="small border-0 fw-semibold p-2">$545</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+$1.5</td>
+                                                    <td class="text-success small border-0 fw-semibold p-2">+1.5%</td>
+                                                </tr>
+                                                <!-- End -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+                        </div><!--end row-->
+
+                        <div class="row row-cols-xl-6 row-cols-md-3 row-cols-sm-2 row-cols-1">
+                            <div class="col mt-4">
+                                <div class="card border-0 p-3 rounded shadow position-relative">
+                                    <div class="d-flex justify-content-between align-items-center mb-4" style="z-index: 1;">
+                                        <div class="d-flex align-items-center">
+                                            <img src="assets/images/crypto/kucoin.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                            <h6 class="mb-0 ms-2">Kucoin</h6>
+                                        </div>
+                                        <span class="text-muted small fw-semibold">KCS</span>
+                                    </div>
+        
+                                    <div class="d-flex justify-content-between align-items-center fw-semibold" style="z-index: 1;">
+                                        <small class="text-success">+15.55%</small>
+                                        <small class="text-success">+$ 155</small>
+                                        <small>$ 41245</small>
+                                    </div>
+        
+                                    <div class="crypto-chart position-absolute p-3 top-0 start-0" style="opacity: 0.08; z-index: 0;">
+                                        <div>
+                                            <div id="chart-1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end slide-->
+        
+                            <div class="col mt-4">
+                                <div class="card border-0 p-3 rounded shadow position-relative">
+                                    <div class="d-flex justify-content-between align-items-center mb-4" style="z-index: 1;">
+                                        <div class="d-flex align-items-center">
+                                            <img src="assets/images/crypto/ethereum.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                            <h6 class="mb-0 ms-2">Ethereum</h6>
+                                        </div>
+                                        <span class="text-muted small fw-semibold">ETS</span>
+                                    </div>
+        
+                                    <div class="d-flex justify-content-between align-items-center fw-semibold" style="z-index: 1;">
+                                        <small class="text-danger">-25.01%</small>
+                                        <small class="text-danger">-$ 524</small>
+                                        <small>$ 1458</small>
+                                    </div>
+        
+                                    <div class="crypto-chart position-absolute p-3 top-0 start-0" style="opacity: 0.08; z-index: 0;">
+                                        <div>
+                                            <div id="chart-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end slide-->
+        
+                            <div class="col mt-4">
+                                <div class="card border-0 p-3 rounded shadow position-relative">
+                                    <div class="d-flex justify-content-between align-items-center mb-4" style="z-index: 1;">
+                                        <div class="d-flex align-items-center">
+                                            <img src="assets/images/crypto/monero.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                            <h6 class="mb-0 ms-2">Monero</h6>
+                                        </div>
+                                        <span class="text-muted small fw-semibold">XMR</span>
+                                    </div>
+        
+                                    <div class="d-flex justify-content-between align-items-center fw-semibold" style="z-index: 1;">
+                                        <small class="text-success">+3.08%</small>
+                                        <small class="text-success">+$ 58</small>
+                                        <small>$ 448</small>
+                                    </div>
+        
+                                    <div class="crypto-chart position-absolute p-3 top-0 start-0" style="opacity: 0.08; z-index: 0;">
+                                        <div>
+                                            <div id="chart-3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end slide-->
+        
+                            <div class="col mt-4">
+                                <div class="card border-0 p-3 rounded shadow position-relative">
+                                    <div class="d-flex justify-content-between align-items-center mb-4" style="z-index: 1;">
+                                        <div class="d-flex align-items-center">
+                                            <img src="assets/images/crypto/litecoin.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                            <h6 class="mb-0 ms-2">Litecoin</h6>
+                                        </div>
+                                        <span class="text-muted small fw-semibold">LTC</span>
+                                    </div>
+        
+                                    <div class="d-flex justify-content-between align-items-center fw-semibold" style="z-index: 1;">
+                                        <small class="text-danger">-5.05%</small>
+                                        <small class="text-danger">-$ 48</small>
+                                        <small>$ 478</small>
+                                    </div>
+        
+                                    <div class="crypto-chart position-absolute p-3 top-0 start-0" style="opacity: 0.08; z-index: 0;">
+                                        <div>
+                                            <div id="chart-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+
+                            <div class="col mt-4">
+                                <div class="card border-0 p-3 rounded shadow position-relative">
+                                    <div class="d-flex justify-content-between align-items-center mb-4" style="z-index: 1;">
+                                        <div class="d-flex align-items-center">
+                                            <img src="assets/images/crypto/blocknet.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                            <h6 class="mb-0 ms-2">Blocknet</h6>
+                                        </div>
+                                        <span class="text-muted small fw-semibold">BLOCK</span>
+                                    </div>
+        
+                                    <div class="d-flex justify-content-between align-items-center fw-semibold" style="z-index: 1;">
+                                        <small class="text-danger">-8.05%</small>
+                                        <small class="text-danger">-$ 58</small>
+                                        <small>$ 546</small>
+                                    </div>
+        
+                                    <div class="crypto-chart position-absolute p-3 top-0 start-0" style="opacity: 0.08; z-index: 0;">
+                                        <div>
+                                            <div id="chart-5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+        
+                            <div class="col mt-4">
+                                <div class="card border-0 p-3 rounded shadow position-relative">
+                                    <div class="d-flex justify-content-between align-items-center mb-4" style="z-index: 1;">
+                                        <div class="d-flex align-items-center">
+                                            <img src="assets/images/crypto/bittorrent.png" class="avatar avatar-coin rounded-pill p-1 bg-light shadow" alt="">
+                                            <h6 class="mb-0 ms-2">Bittorrent</h6>
+                                        </div>
+                                        <span class="text-muted small fw-semibold">BTT</span>
+                                    </div>
+        
+                                    <div class="d-flex justify-content-between align-items-center fw-semibold" style="z-index: 1;">
+                                        <small class="text-success">+3.08%</small>
+                                        <small class="text-success">+$ 58</small>
+                                        <small>$ 448</small>
+                                    </div>
+        
+                                    <div class="crypto-chart position-absolute p-3 top-0 start-0" style="opacity: 0.08; z-index: 0;">
+                                        <div>
+                                            <div id="chart-6"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end slide-->
+                        </div><!--end row-->
+
+                        <div class="row">
+                            <div class="col-xl-6 col-12 mt-4">
+                                <div class="card rounded shadow">
+                                    <div class="p-3 border-bottom">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="mb-0 fw-bold">Transections</h6>
+                                            
+                                            <div class="mb-0 position-relative">
+                                                <select class="form-select form-control" id="yearchart">
+                                                    <option selected>Today</option>
+                                                    <option value="week">This Week</option>
+                                                    <option value="month">This Month</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-responsive rounded-bottom" data-simplebar style="height: 270px;">
+                                        <table class="table table-center bg-white mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="p-3">Type</th>
+                                                    <th class="text-center p-3">Assets</th>
+                                                    <th class="text-center p-3">Date</th>
+                                                    <th class="text-center p-3">Amt</th>
+                                                    <th class="text-center p-3">Wallet ID.</th>
+                                                    <th class="text-end p-3">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="text-center">
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="text-start fw-semibold border-0 px-3 py-2"><span class="badge text-bg-success">Buy</span></th>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">BTC</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">25th April 23</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">$350</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2 text-primary">qhut0...hfteh45</td>
+                                                    <td class="text-end fw-semibold border-0 px-3 py-2"><span class="badge bg-soft-info">Progress</span></td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="text-start fw-semibold border-0 px-3 py-2"><span class="badge text-bg-danger">Sell</span></th>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">LTC</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">25th April 23</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">1.45 LTC</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2 text-primary">qhut0...hfteh45</td>
+                                                    <td class="text-end fw-semibold border-0 px-3 py-2"><span class="badge bg-soft-danger">Pending</span></td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="text-start fw-semibold border-0 px-3 py-2"><span class="badge text-bg-danger">Sell</span></th>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">ARC</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">25th April 23</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">1.45 ARC</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2 text-primary">qhut0...hfteh45</td>
+                                                    <td class="text-end fw-semibold border-0 px-3 py-2"><span class="badge bg-soft-success">Successfully</span></td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="text-start fw-semibold border-0 px-3 py-2"><span class="badge text-bg-danger">Sell</span></th>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">CNY</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">25th April 23</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">1.45 CNY</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2 text-primary">qhut0...hfteh45</td>
+                                                    <td class="text-end fw-semibold border-0 px-3 py-2"><span class="badge bg-soft-success">Successfully</span></td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="text-start fw-semibold border-0 px-3 py-2"><span class="badge text-bg-success">Buy</span></th>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">ETH</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">25th April 23</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">$350</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2 text-primary">qhut0...hfteh45</td>
+                                                    <td class="text-end fw-semibold border-0 px-3 py-2"><span class="badge bg-soft-info">Progress</span></td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="text-start fw-semibold border-0 px-3 py-2"><span class="badge text-bg-success">Buy</span></th>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">PTC</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">25th April 23</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">$350</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2 text-primary">qhut0...hfteh45</td>
+                                                    <td class="text-end fw-semibold border-0 px-3 py-2"><span class="badge bg-soft-danger">Pending</span></td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="text-start fw-semibold border-0 px-3 py-2"><span class="badge text-bg-danger">Sell</span></th>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">ZCC</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">25th April 23</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">1.45 ZCC</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2 text-primary">qhut0...hfteh45</td>
+                                                    <td class="text-end fw-semibold border-0 px-3 py-2"><span class="badge bg-soft-success">Successfully</span></td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="text-start fw-semibold border-0 px-3 py-2"><span class="badge text-bg-success">Buy</span></th>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">XPM</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">25th April 23</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">$350</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2 text-primary">qhut0...hfteh45</td>
+                                                    <td class="text-end fw-semibold border-0 px-3 py-2"><span class="badge bg-soft-danger">Pending</span></td>
+                                                </tr>
+                                                <!-- End -->
+
+                                                <!-- Start -->
+                                                <tr>
+                                                    <th class="text-start fw-semibold border-0 px-3 py-2"><span class="badge text-bg-success">Buy</span></th>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">BLOCK</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">25th April 23</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2">$350</td>
+                                                    <td class="small fw-semibold border-0 px-3 py-2 text-primary">qhut0...hfteh45</td>
+                                                    <td class="text-end fw-semibold border-0 px-3 py-2"><span class="badge bg-soft-success">Successfully</span></td>
+                                                </tr>
+                                                <!-- End -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><!--end -->
+                            </div><!--end col-->
+
+                            <div class="col-xl-3 col-md-6 mt-4">
+                                <div class="card shadow rounded p-3 overflow-hidden">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div>
+                                            <h6 class="mb-1 fw-bold">Exchange</h6>
+                                            <span class="text-muted small fw-semibold">1BTC = $27,427.17</span>
+                                        </div>
+                                        
+                                        <div class="mb-0 position-relative">
+                                            <select class="form-select form-control" id="yearchart">
+                                                <option selected>Market</option>
+                                                <option value="market">Market</option>
+                                                <option value="market">Market</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <ul class="nav nav-pills nav-justified flex-column flex-sm-row rounded" id="pills-tab" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link rounded active" id="pills-cloud-tab" data-bs-toggle="pill" href="#pills-cloud" role="tab" aria-controls="pills-cloud" aria-selected="false">
+                                                        <div class="text-center">
+                                                            <h6 class="mb-0 small">Buy or Sell</h6>
+                                                        </div>
+                                                    </a><!--end nav link-->
+                                                </li><!--end nav item-->
+                                                
+                                                <li class="nav-item">
+                                                    <a class="nav-link rounded" id="pills-smart-tab" data-bs-toggle="pill" href="#pills-smart" role="tab" aria-controls="pills-smart" aria-selected="false">
+                                                        <div class="text-center">
+                                                            <h6 class="mb-0 small">Calculator</h6>
+                                                        </div>
+                                                    </a><!--end nav link-->
+                                                </li><!--end nav item-->
+                                            </ul><!--end nav pills-->
+                                        </div><!--end col-->
+                                    </div><!--end row-->
+                                    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="tab-content" id="pills-tabContent">
+                                                <div class="tab-pane fade show active" id="pills-cloud" role="tabpanel" aria-labelledby="pills-cloud-tab">
+                                                    <form>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text border bg-light">Amount</span>
+                                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                                            <span class="input-group-text border bg-light">BTC</span>
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                            <select class="form-select form-control w-25" aria-label="Default select example">
+                                                                <option selected>Last Trade Price</option>
+                                                                <option value="1">Last Buy Price</option>
+                                                                <option value="2">Last Sell Price</option>
+                                                            </select>
+                                                            <input type="text" class="form-control" aria-label="Amount" placeholder="$25,000">
+                                                            <span class="input-group-text border bg-light">$ Dollor</span>
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text border bg-light">Total</span>
+                                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                                            <span class="input-group-text border bg-light">$ Dollor</span>
+                                                        </div> 
+                                                        <div class=" mt-3 ms-auto">
+                                                            <a href="#" class="btn btn-sm btn-success">Buy Now</a>
+                                                            <a href="#" class="btn btn-sm btn-danger">Sell Now</a>
+                                                        </div>
+                                                    </form> <!--end form-->
+                                                </div><!--end teb pane-->
+                                                
+                                                <div class="tab-pane fade" id="pills-smart" role="tabpanel" aria-labelledby="pills-smart-tab">
+                                                    <crypto-converter-widget shadow symbol live background-color="#161c2d" border-radius="6px" fiat="united-states-dollar" crypto="bitcoin" amount="1" font-family="sans-serif" decimal-places="2"></crypto-converter-widget>
+                                                </div><!--end teb pane-->
+                                            </div><!--end tab content-->
+                                        </div><!--end col-->
+                                    </div><!--end row-->
+                                </div>
+                            </div><!--end col-->
+
+                            <div class="col-xl-3 col-md-6 mt-4">
+                                <div class="card rounded shadow">
+                                    <div class="p-3 border-bottom">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="mb-0 fw-bold">My Orders</h6>
+                                            
+                                            <div class="mb-0 position-relative">
+                                                <select class="form-select form-control" id="yearchart">
+                                                    <option selected>Today</option>
+                                                    <option value="week">This Week</option>
+                                                    <option value="month">This Month</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3" data-simplebar style="height: 270px;">
+                                        <div class="rounded shadow p-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="badge text-bg-success">Buy</span> 
+                                                    <h6 class="fw-semibold mb-0 ms-2">Bitcoin</h6>
+                                                </div>
+
+                                                <span class="badge bg-soft-success">Successfully</span>
+                                            </div>
+
+                                            <div class="d-flex align-items-center mt-3">
+                                                <div class="">
+                                                    <h6 class="text-muted mb-0">Spend</h6>
+                                                    <h6 class="mb-0">$ 45,456</h6>
+                                                </div>
+
+                                                <div class="ms-3">
+                                                    <h6 class="text-muted mb-0">Recieved</h6>
+                                                    <h6 class="mb-0">0.00956BTC</h6>
+                                                </div>
+                                            </div>
+                                        </div><!--end content-->
+
+                                        <div class="rounded shadow p-3 mt-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="badge text-bg-danger">Sell</span> 
+                                                    <h6 class="fw-semibold mb-0 ms-2">Blocknet</h6>
+                                                </div>
+
+                                                <span class="badge bg-soft-danger">Pending</span>
+                                            </div>
+
+                                            <div class="d-flex align-items-center mt-3">
+                                                <div class="">
+                                                    <h6 class="text-muted mb-0">Spend</h6>
+                                                    <h6 class="mb-0">0.00956BTC</h6>
+                                                </div>
+                                                
+                                                <div class="ms-3">
+                                                    <h6 class="text-muted mb-0">Recieved</h6>
+                                                    <h6 class="mb-0">$ 45,456</h6>
+                                                </div>
+                                            </div>
+                                        </div><!--end content-->
+
+                                        <div class="rounded shadow p-3 mt-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="badge text-bg-danger">Sell</span> 
+                                                    <h6 class="fw-semibold mb-0 ms-2">Litecoin</h6>
+                                                </div>
+
+                                                <span class="badge bg-soft-info">Progress</span>
+                                            </div>
+
+                                            <div class="d-flex align-items-center mt-3">
+                                                <div class="">
+                                                    <h6 class="text-muted mb-0">Spend</h6>
+                                                    <h6 class="mb-0">$ 45,456</h6>
+                                                </div>
+
+                                                <div class="ms-3">
+                                                    <h6 class="text-muted mb-0">Recieved</h6>
+                                                    <h6 class="mb-0">0.00956BTC</h6>
+                                                </div>
+                                            </div>
+                                        </div><!--end content-->
+
+                                        <div class="rounded shadow p-3 mt-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="badge text-bg-success">Buy</span> 
+                                                    <h6 class="fw-semibold mb-0 ms-2">Kucoin</h6>
+                                                </div>
+
+                                                <span class="badge bg-soft-success">Successfully</span>
+                                            </div>
+
+                                            <div class="d-flex align-items-center mt-3">
+                                                <div class="">
+                                                    <h6 class="text-muted mb-0">Spend</h6>
+                                                    <h6 class="mb-0">$ 45,456</h6>
+                                                </div>
+
+                                                <div class="ms-3">
+                                                    <h6 class="text-muted mb-0">Recieved</h6>
+                                                    <h6 class="mb-0">0.00956BTC</h6>
+                                                </div>
+                                            </div>
+                                        </div><!--end content-->
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+                        </div><!--end row-->
+                    </div>
+                </div><!--end container-->
+
+                @@include("partials/footer.html")
+            </main>
+            <!--End page-content" -->
+        </div>
+        <!-- page-wrapper -->
+
+        @@include("partials/offcanvas-right.html")
+        
+        <!-- javascript -->
+        @@include("partials/vendor-scripts.html")
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <script async src="https://cdn.jsdelivr.net/gh/dejurin/crypto-converter-widget@1.5.2/dist/latest.min.js"></script>
+        <!-- Main Js -->
+        <script src="assets/js/plugins.init.js"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
+
+</html>

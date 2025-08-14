@@ -1,0 +1,42 @@
+
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        <!-- Css -->
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- ERROR PAGE -->
+        <section class="bg-home d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-12 text-center">
+                        <img src="assets/images/404.svg" style="max-width: 500px;" alt="">
+                        <div class="text-uppercase mt-4 display-5 fw-semibold">Page Not Found</div>
+                        <div class="text-capitalize text-dark mb-4 error-page"></div>
+                        <p class="text-muted para-desc mx-auto">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row">
+                    <div class="col-md-12 text-center">  
+                        <a href="index.html" class="btn btn-primary mt-4">Go To Home</a>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- ERROR PAGE -->
+        
+        <!-- javascript -->
+        @@include("partials/vendor-scripts.html")
+        <!-- Main Js -->
+        <script src="assets/js/plugins.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+
+</html>

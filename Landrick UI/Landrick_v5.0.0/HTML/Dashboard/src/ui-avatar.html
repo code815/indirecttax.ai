@@ -1,0 +1,102 @@
+
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        <!-- Css -->
+        <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <div class="page-wrapper toggled">
+            @@include("partials/sidebar-dark.html")
+
+            <!-- Start Page Content -->
+            <main class="page-content bg-light">
+                @@include("partials/top-header.html")
+
+                <div class="container-fluid">
+                    <div class="layout-specing">
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Avatars</h5>
+
+                            <nav aria-label="breadcrumb" class="d-inline-block mt-2 mt-sm-0">
+                                <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
+                                    <li class="breadcrumb-item text-capitalize"><a href="index.html">Landrick</a></li>
+                                    <li class="breadcrumb-item text-capitalize"><a href="">Components</a></li>
+                                    <li class="breadcrumb-item text-capitalize active" aria-current="page">Avatars</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    
+                        <div class="row">
+                            <!-- Default Avatars Start -->
+                            <div class="col-12 mt-4">
+                                <div class="card rounded shadow">
+                                    <div class="p-4 border-bottom">
+                                        <h5 class="title mb-0"> Default Avatars </h5>
+                                    </div>
+        
+                                    <div class="p-4">
+                                        <h6 class="text-muted mb-4 pb-2">Ex. <code class="text-danger">&lt;img src="assets/images/home/01.jpg" class="avatar avatar-ex-sm rounded"&gt;</code></h6>
+                                        
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-ex-sm me-2 rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-ex-sm" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-ex-small me-2 rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-ex-small" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-md-sm me-2 rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-md-sm" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-small me-2 rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-small" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-md-md mt-sm-0 me-2 rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-md-md" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-medium mt-sm-0 me-2 rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-medium" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-large mt-sm-0 me-2 rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-large" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-ex-large mt-sm-0 me-2 rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-ex-large" alt="">
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+                            <!-- Default Avatars End -->
+
+                            <!-- Circle Avatars Start -->
+                            <div class="col-12 mt-4">
+                                <div class="card rounded shadow">
+                                    <div class="p-4 border-bottom">
+                                        <h5 class="title mb-0"> Circle Avatars </h5>
+                                    </div>
+        
+                                    <div class="p-4">
+                                        <h6 class="text-muted mb-4 pb-2">Ex. <code class="text-danger">&lt;img src="assets/images/home/01.jpg" class="avatar avatar-ex-sm rounded-circle"&gt;</code></h6>
+                                        
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-ex-sm me-2 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-ex-sm" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-ex-small me-2 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-ex-small" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-md-sm me-2 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-md-sm" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-small me-2 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-small" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-md-md mt-sm-0 me-2 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-md-md" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-medium mt-sm-0 me-2 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-medium" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-large mt-sm-0 me-2 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-large" alt="">
+                                        <img src="assets/images/client/05.jpg" class="avatar avatar-ex-large mt-sm-0 me-2 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="avatar-ex-large" alt="">
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+                            <!-- Circle Avatars End -->
+                        </div><!--end row-->
+                    </div>
+                </div><!--end container-->
+
+                @@include("partials/footer.html")
+            </main>
+            <!--End page-content" -->
+        </div>
+        <!-- page-wrapper -->
+
+        @@include("partials/offcanvas-right.html")
+        
+        <!-- javascript -->
+        @@include("partials/vendor-scripts.html")
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <!-- Main Js -->
+        <script src="assets/js/plugins.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,58 @@
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        
+        <!-- Style Css-->
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+        
+        @@include("partials/navbar/nav-video-studio.html")
+        
+        <!-- Hero Start -->
+        <section class="bg-video-studio d-flex align-items-center"  id="home">
+            <div class="bg-video-wrapper">
+                <iframe src="https://player.vimeo.com/video/248868311?background=1&autoplay=1&loop=1&byline=0&title=0"></iframe>
+                <!--Note: Vimeo Embed Background Video-->
+
+                <!-- <iframe src="https://www.youtube.com/embed/yba7hPeTSjk?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1"></iframe> -->
+                <!--Note: Youtube Embed Background Video-->
+            </div>
+            <!-- <div class="bg-overlay" style="background: url('assets/images/overlay.png');"></div> -->
+            <div class="bg-overlay bg-black" style="opacity: 0.2;"></div>
+            <div class="container-fluid">
+                <div class="position-absolute bottom-0 start-0 end-0 pb-8">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-block">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="text-white text-xl font-semibold">Videos for Ads</h5>
+                                        <a href="video-portfolio.html" class="text-white">See Videos <i class="uil uil-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--end section-->
+        <!-- Hero End -->
+        
+        @@include("partials/switcherbar.html")
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fs-5"><i data-feather="arrow-up" class="fea icon-sm icons align-middle"></i></a>
+        <!-- Back to top -->
+
+        <!-- javascript -->
+        @@include("partials/vendor-scripts.html")
+        <!-- Main Js -->
+        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        <script src="assets/js/plugins.init.js"></script><!--Note: All init (custom) js like tiny slider, counter, countdown, lightbox, gallery, swiper slider etc.-->
+        <script src="assets/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+    </body>
+</html>
