@@ -6,3 +6,17 @@ __pycache__/
 storage/
 logs/
 .vercel
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# Frontend / static
+node_modules/
+dist/
+build/
+
+# OS
+Thumbs.db
