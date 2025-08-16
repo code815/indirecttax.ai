@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: indirecttax-api
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn api.server:app --host 0.0.0.0 --port $PORT --log-level info --timeout-keep-alive 5 --limit-concurrency 10"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DB_MAX_CONNECTIONS
+        value: 2
+      - key: POSTGRES_HOST
+        value: dpg-xxx.ohio-postgres.render.com   # <-- your host
+      - key: POSTGRES_PORT
+        value: 5432
+      - key: POSTGRES_DB
+        value: indirecttax_db                     # <-- your db name
+      - key: POSTGRES_USER
+        value: indirecttax_db_user                # <-- your user
+      - key: POSTGRES_PASSWORD
+        sync: false                                # set in the dashboard after first deploy
+      - key: POSTGRES_SSLMODE
+        value: require
+      - key: TAXJAR_API_KEY
+        sync: false                                # optional placeholder for later
+      - key: ENV
+        value: render
